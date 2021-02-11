@@ -12,7 +12,7 @@ const forecast = (latitude, longitude, callback) => {
         }
         else{
             console.log(body)
-            callback(undefined,'It\'s '+body.current.temperature+' celsius, rain forecast is ' +body.current.precip+'%'+' wind speed is '+body.current.wind_speed)
+            callback(undefined,'It\'s '+ body.current.weather_descriptions[0]+' outside and '+body.current.temperature+' celsius, the chance of rain is ' +body.current.precip+'%'+', wind speed is '+body.current.wind_speed+'kmph, humidity is '+body.current.humidity+'%.')
         }
     })
 }
